@@ -35,7 +35,7 @@ services:
     # volumes:
       # - "../smart-launcher:/app"
 
-  r4: # HAPI STU3 ------------------------------------------------------------
+  r4: # HAPI R4 ------------------------------------------------------------
     image: smartonfhir/hapi:r4-empty
     environment:
       PORT        : $HAPI_PORT_R4
