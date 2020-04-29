@@ -2,13 +2,14 @@ version: '3.2'
 services:
 
   smart-launcher: # SMART Launcher ---------------------------------------------
-    image: smartonfhir/smart-launcher:r4
+    #image: smartonfhir/smart-launcher:r4
     build: ../smart-launcher
     restart: unless-stopped
     environment:
       NODE_ENV               : "production"
       LAUNCHER_BASE_URL      : "http://${HOST}:${LAUNCHER_PORT}"
       BASE_URL               : "http://${HOST}:${LAUNCHER_PORT}"
+      AUTH_BASE_URL          : "https://auth.tcpdev.org/oxauth/restv1"
       FHIR_SERVER_R2         : "http://${HOST}:${HAPI_PORT_STU2}/baseDstu2"
       FHIR_SERVER_R3         : "http://${HOST}:${HAPI_PORT_STU3}/baseDstu3"
       FHIR_SERVER_R4         : "http://${HOST}:${HAPI_PORT_R4}/baseR4"
