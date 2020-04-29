@@ -5,3 +5,4 @@ fhir-viewer/known-servers.js
 www/index.html
 derby.log
 !*/.gitkeep
+r4-data-empty/
